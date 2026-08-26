@@ -1,0 +1,311 @@
+@charset "UTF-8";
+
+.produtos-intro{
+    width: 100%;
+    background-color: var(--cor2);
+    background-image: linear-gradient(160deg, var(--cor2), var(--verde-premium));
+    padding: 60px 0 50px;
+  }
+  
+  .conteudo-produtos-intro{
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .conteudo-produtos-intro h1{
+    font-family: var(--font-display);
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    color: white;
+  }
+  
+  .produtos-tagline{
+    font-family: var(--font-tagline);
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 8px;
+    margin-bottom: 36px;
+  }
+  
+  .caixa-cupom{
+    position: relative;
+    background-color: white;
+    border: 2px dashed var(--cor3);
+    border-radius: 14px;
+    padding: 24px 28px;
+    text-align: left;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2);
+  }
+  
+  .caixa-cupom::before,
+  .caixa-cupom::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 24px;
+    height: 24px;
+    background-color: var(--cor2);
+    border-radius: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .caixa-cupom::before{
+    left: -12px; 
+  }
+  .caixa-cupom::after{
+    right: -12px; 
+  }
+  
+  .caixa-cupom-conteudo{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .caixa-cupom-conteudo i{
+    font-size: 1.4rem;
+    color: var(--cor3);
+  }
+  
+  .caixa-cupom-conteudo p{
+    font-family: var(--font-tagline);
+    font-size: 0.95rem;
+    color: #333;
+  }
+  
+  .vitrine{
+    width: 100%;
+    padding: 20px 0 80px;
+  }
+  
+  .vitrine-lista{
+    list-style: none;
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .vitrine-item{
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    padding: 40px 32px;
+    border-radius: 20px;
+  }
+  
+  .vitrine-item:nth-child(odd){
+    background-color: white;
+  }
+  
+  .vitrine-item:nth-child(even){
+    background-color: color-mix(in srgb, var(--cor0) 12%, white);
+    flex-direction: row-reverse;
+  }
+  
+  .vitrine-foto{
+    flex: 1;
+    aspect-ratio: 4 / 3;
+    background-color: #e2e2e2;
+    border-radius: 16px;
+  }
+  
+  .vitrine-info{
+    flex: 1;
+  }
+  
+  .vitrine-info h2{
+    font-family: var(--font-display);
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    color: var(--cor4);
+    margin-bottom: 8px;
+  }
+  
+  .vitrine-info p{
+    font-family: var(--font-tagline);
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .botao-cupom{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--cor3);
+    color: white;
+    border: none;
+    border-radius: 999px;
+    padding: 12px 24px;
+    font-family: var(--font-tagline);
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+  }
+  
+  .botao-cupom:hover{
+    background-color: var(--cor4);
+    transform: translateY(-2px);
+  }
+  
+  .modal-cupom{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    border: none;
+    border-radius: 18px;
+    padding: 32px;
+    width: 90%;
+    max-width: 420px;
+    max-height: 85vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+  }
+  
+  .modal-cupom::backdrop{
+    background-color: rgba(13, 51, 45, 0.55);
+  }
+  
+  .form-cupom{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  
+  .form-cupom h2{
+    font-family: var(--font-display);
+    color: var(--cor4);
+    font-size: 1.4rem;
+    margin-bottom: 4px;
+  }
+  
+  .modal-produto{
+    font-family: var(--font-tagline);
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 12px;
+  }
+  
+  .form-cupom label{
+    font-family: var(--font-tagline);
+    font-size: 0.85rem;
+    color: #333;
+    margin-top: 8px;
+  }
+  
+  .form-cupom input[type="text"],
+  .form-cupom input[type="tel"]{
+    font-family: var(--font-tagline);
+    padding: 10px 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-top: 4px;
+  }
+  
+  .modal-botoes{
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 24px;
+  }
+  
+  .modal-botoes button{
+    font-family: var(--font-tagline);
+    font-size: 0.85rem;
+    padding: 10px 18px;
+    border-radius: 999px;
+    cursor: pointer;
+    border: none;
+  }
+  
+  .botao-cancelar{
+    background-color: #eee;
+    color: #333;
+  }
+  
+  .botao-confirmar{
+    background-color: var(--cor3);
+    color: white;
+  }
+  
+  .botao-confirmar:disabled{
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  .modal-aviso{
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    background-color: #eef5ff;
+    border: 1px solid #3b82f6;
+    border-radius: 12px;
+    padding: 14px 16px;
+    margin: 14px 0;
+  }
+  
+  .modal-aviso i{
+    font-size: 1.1rem;
+    color: #3b82f6;
+    margin-top: 2px;
+  }
+  
+  .modal-aviso p{
+    font-family: var(--font-tagline);
+    font-size: 0.82rem;
+    color: #333;
+    line-height: 1.5;
+  }
+  
+  .checkbox-termos{
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 14px;
+    cursor: pointer;
+  }
+  
+  .checkbox-termos input{
+    margin-top: 3px;
+    accent-color: var(--cor3);
+    cursor: pointer;
+  }
+  
+  .checkbox-termos span{
+    font-family: var(--font-tagline);
+    font-size: 0.85rem;
+    color: #444;
+    line-height: 1.4;
+  }
+  
+  .checkbox-termos a{
+    color: var(--cor4);
+    text-decoration: underline;
+  }
+  
+  .checkbox-termos a:hover{
+    color: var(--cor3);
+  }
+  
+  @media (max-width: 768px){
+
+    .vitrine-item,
+    .vitrine-item:nth-child(even){
+      flex-direction: column;
+      padding: 24px 20px;
+    }
+  
+    .vitrine-foto{
+      width: 100%;
+    }
+  
+    .modal-cupom{
+      width: 92%;
+      padding: 24px;
+    }
+  }

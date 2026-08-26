@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="shortcut icon" href="../public/favicon.ico" type="image/x-icon">
+    <title>AcuidadeVisual</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/produtos.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">
+            <picture>
+                <source media="(max-width: 943px)" srcset="assets/logo-mobile.png">
+                <img src="assets/logo.png" alt="Ótica Acuidade Visual">
+            </picture>
+        </a>
+        <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-principal">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav id="menu-principal">
+            <a href="index.html">Home</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="produtos.html">Produtos</a>
+            <a href="servicos.html">Serviços</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="produtos-intro">
+            <div class="conteudo-produtos-intro">
+                <h1>Nossos Produtos</h1>
+                <p class="produtos-tagline">Design, conforto e nitidez em cada detalhe. Conheça nossos modelos e garanta a proteção e o cuidado que os seus olhos merecem, sem abrir mão da elegância.</p>
+
+                <div class="caixa-cupom" id="caixa-cupom">
+                    <div class="caixa-cupom-conteudo">
+                        <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+                        <p>Cupom disponível: <strong>5% de desconto</strong> em qualquer produto abaixo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="vitrine">
+            <ul class="vitrine-lista">
+                <li class="vitrine-item">
+                    <div class="vitrine-foto"></div>
+                    <div class="vitrine-info">
+                        <h2>Aviador Clássico</h2>
+                        <p>Leve e resistente para o dia a dia.</p>
+                        <button class="botao-cupom" data-produto="Aviador Clássico">
+                            <i class="fa-solid fa-ticket" aria-hidden="true"></i>
+                            Resgatar cupom
+                        </button>
+                    </div>
+                </li>
+                <li class="vitrine-item">
+                    <div class="vitrine-foto"></div>
+                    <div class="vitrine-info">
+                        <h2>Redondo Vintage</h2>
+                        <p>Conforto o dia todo.</p>
+                        <button class="botao-cupom" data-produto="Redondo Vintage">
+                            <i class="fa-solid fa-ticket" aria-hidden="true"></i>
+                            Resgatar cupom
+                        </button>
+                    </div>
+                </li>
+                <li class="vitrine-item">
+                    <div class="vitrine-foto"></div>
+                    <div class="vitrine-info">
+                        <h2>Quadrado Bold</h2>
+                        <p>Proteção com estilo.</p>
+                        <button class="botao-cupom" data-produto="Quadrado Bold">
+                            <i class="fa-solid fa-ticket" aria-hidden="true"></i>
+                            Resgatar cupom
+                        </button>
+                    </div>
+                </li>
+                <li class="vitrine-item">
+                    <div class="vitrine-foto"></div>
+                    <div class="vitrine-info">
+                        <h2>Gatinho Retrô</h2>
+                        <p>Um clássico atemporal.</p>
+                        <button class="botao-cupom" data-produto="Gatinho Retrô">
+                            <i class="fa-solid fa-ticket" aria-hidden="true"></i>
+                            Resgatar cupom
+                        </button>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <dialog class="modal-cupom" id="modal-cupom" aria-labelledby="modal-titulo">
+            <form class="form-cupom" id="form-cupom">
+                <h2 id="modal-titulo">Resgatar cupom</h2>
+                <p class="modal-produto">Produto: <strong id="modal-produto-nome"></strong></p>
+
+                <div class="modal-aviso">
+                    <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+                    <p>Para o resgate do cupom, é necessário apresentar um documento com foto no local. O número de WhatsApp informado deve ser o mesmo utilizado para o envio da mensagem.</p>
+                </div>
+
+                <label class="checkbox-termos">
+                    <input type="checkbox" id="input-termos" required>
+                    <span>Li e aceito os <a href="termos-privacidade.html" target="_blank">Termos e Política de Privacidade</a></span>
+                </label>
+
+                <label for="input-nome">Nome</label>
+                <input type="text" id="input-nome" name="nome" required>
+
+                <label for="input-telefone">WhatsApp (com DDD)</label>
+                <input type="tel" id="input-telefone" name="telefone" placeholder="(11) 91234-5678" required>
+
+                <div class="modal-botoes">
+                    <button type="button" class="botao-cancelar" id="botao-cancelar">Cancelar</button>
+                    <button type="submit" class="botao-confirmar" id="botao-confirmar">Continuar</button>
+                </div>
+            </form>
+        </dialog>
+    </main>
+
+    <footer class="footer">
+        <div class="conteudo-footer">
+
+            <div class="footer-colunas">
+    
+                <div class="footer-coluna footer-marca">
+                    <picture class="logo">
+                        <source media="(max-width: 768px)" srcset="assets/logo-mobile.png">
+                        <img src="assets/logo.png" alt="Ótica Acuidade Visual">
+                    </picture>
+                    <p>Sua ótica de confiança, com um olhar clínico e cuidado em cada detalhe.</p>
+    
+                    <div class="footer-social-links">
+                        <a href="https://wa.me/55SEUNUMERO" target="_blank" aria-label="WhatsApp">
+                            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://instagram.com/seuinsta" target="_blank" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+    
+                <nav class="footer-coluna footer-nav" aria-label="Navegação do rodapé">
+                    <h3>Navegação</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                        <li><a href="produtos.html">Produtos</a></li>
+                        <li><a href="servicos.html">Serviços</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </nav>
+    
+                <div class="footer-coluna footer-contato">
+                    <h3>Contato</h3>
+                    <address>
+                        R. Cirilo Maciel, 85 - Centro<br>
+                        Lagoa da Prata - MG, 35590-000
+                    </address>
+                    <p>(37) 3261-5602</p>
+                    <p>Seg a Sex: 8h às 18:30h<br>Sáb: 8h às 12:30h</p>
+                </div>
+    
+                <div class="footer-coluna footer-regulamento">
+                    <h3>Regulamento</h3>
+                    <ul>
+                        <li><a href="termos-privacidade.html">Termos e Política de Privacidade</a></li>
+                    </ul>
+                </div>
+    
+            </div>
+    
+            <hr class="footer-linha">
+    
+            <p class="footer-copyright">
+                &copy; <span id="ano-atual"></span>. Todos os direitos reservados. Desenvolvido por <a href="#" target="_blank">Luis Fernando Lopes</a>.
+            </p>
+    
+        </div>
+    </footer>
+
+    <script src="produtos.js" defer></script>
+</body>
+</html>
